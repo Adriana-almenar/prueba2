@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Bebas+Neue" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>greeting2</title>
+<style>
+
+        /*CSS RESETS*/
+
+body{
+    background-color: #fff;
+    line-height: 1.6;
+
+}
+
+h1 {
+    margin-top: 0;
+}
+
+
+/*CSS START*/
+
+.full-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.card {
+			 margin: 0px
+    padding: 0px;
+    border: 0px;
+    background: #ae9274;
+    width: 100%;
+    color: #fff;
+    display: inline-block;
+    box-shadow: 2px 2px 1px 0px #808080;
+    border-radius: 10px;
+}
+
+
+
+.d {
+    display: inline;
+    min-width: 0x;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    padding-right: 5px;
+}
+
+.n {
+			 display: inline;
+    min-width: 0px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    padding-right: 0px;
+}
+
+.m {
+				 display: inline;
+    min-width: 0px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    padding-right: 0px;
+}
+
+
+.greet{
+    margin:10px;
+    display:inline;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+     padding-right: -50px;
+}
+
+    </style>
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css?family=Lobster|Roboto:400,700" rel="stylesheet">
+<div class="full-table">
+<div class="table-cell">
+<div class="card">
+<div class="greet" id="greet"></div>
+<div class="d" id="d"></div>
+<div class="n" id="n"></div>
+<div class="m" id="m"></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+function date() {
+				var d = new Date();
+				var m = new Date();
+				var n = new Date();
+					dia = d.getDay();
+			 		 if (dia == 0)
+							 d ="Domingo,";
+							 else if (dia == 1)
+							 db="Lunes,";
+							 else if (dia == 2)
+							 d ="Martes,";
+							 else if (dia == 3)
+							 d="Miércoles,";
+							 else if (dia == 4)
+							 d ="Jueves,";
+							 else if (dia == 5)
+							 d ="Viernes,";
+							 else if (dia == 6)
+							 d ="Sábado,";
+							 else if (dia == 7)
+			  			 d ="Domingo,";
+			  	
+			  	n =n.getDate() + " de ";
+			
+					mes= m.getMonth();
+					if(mes == 0)
+							 m ='Enero';
+							else if(mes ==1)
+							 m ='Febrero';
+							else if(mes ==2)
+							 m ='Marzo';
+							else if(mes ==3)
+							 m ='Abril';
+							else if(mes ==4)
+							 m ='Mayo';
+							else if(mes ==5)
+							 m ='Junio';
+							else if(mes ==6)
+							 m ='Julio';
+							else if(mes ==7)
+							 m ='Agosto';
+							else if(mes ==8)
+							 m ='Septiembre';
+							else if(mes ==9)
+							 m ='Octubre';
+							else if(mes ==10)
+							 m ='Noviembre';
+							else if(mes ==11)
+							 m ='Diciembre';
+document.getElementById('d').innerHTML = d;
+document.getElementById('m').innerHTML = m;
+document.getElementById('n').innerHTML = n;
+}
+
+function clock() {
+				var d = new Date();
+				hrs = d.getHours();
+								if (hrs < 12)
+        				greet = 'Buenos días Adriana ';
+    				else if (hrs >= 12 && hrs < 21)
+        				greet = 'Buenas tardes Adriana ';
+    				else if (hrs >= 21 && hrs < 5)
+        				greet = 'Buenas noches Adriana ';
+document.getElementById('greet').innerHTML = greet}
+
+
+function dateTime() {
+date()
+clock()
+}
+dateTime()
+// END
+</script>
+</html>
